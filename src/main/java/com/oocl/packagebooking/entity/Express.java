@@ -20,6 +20,10 @@ public class Express {
 
     private Date bookinkTime;
 
+    public Express() {
+
+    }
+
     public String getId() {
         return id;
     }
