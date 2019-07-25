@@ -44,24 +44,42 @@ public class PackageBookingApplicationTests {
 
 
 
-//	@Test
-//	public void should_rew_parkinglot_list_case_when_add_parkinglot()throws Exception{
-//		Express express = new Express("111","Mike","12332443345","booked",new Date());
-//		//Express express2 = new Express("222","Danny","12332443345","booked",new Date());
-//		//Express express3 = new Express("333","Gina","12332443345","booked",new Date());
-//
-//		expressRepository.saveAndFlush(express);
-//		//expressRepository.saveAndFlush(express2);
-//
-//		String jsonString = JSON.toJSONString(express);
-//
-//		String content = mockMvc.perform(get("/express")).andExpect(status().isOk())
-//				.andReturn().getResponse().getContentAsString();
-//
-//		//JSONObject jsonObject = new JSONObject(content);
-//
-//
-//		assertEquals("[{\"id\":\"111\",\"recipient\":\"Mike\",\"phone\":\"12332443345\",\"status\":\"booked\",\"bookinkTime\":\"2019-07-25T02:51:09.197+0000\"}]",content);
-//	}
+	@Test
+	public void should_rew_parkinglot_list_case_when_add_parkinglot()throws Exception{
+		Express express = new Express("111","Mike","12332443345","booked",new Date());
+		//Express express2 = new Express("222","Danny","12332443345","booked",new Date());
+		//Express express3 = new Express("333","Gina","12332443345","booked",new Date());
+
+		expressRepository.saveAndFlush(express);
+		//expressRepository.saveAndFlush(express2);
+
+		String jsonString = JSON.toJSONString(express);
+
+		String content = mockMvc.perform(get("/express")).andExpect(status().isOk())
+				.andReturn().getResponse().getContentAsString();
+
+		//JSONObject jsonObject = new JSONObject(content);
+
+
+		assertEquals("[{\"id\":\"111\",\"recipient\":\"Mike\",\"phone\":\"12332443345\",\"status\":\"booked\",\"bookinkTime\":\"2019-07-25T02:51:09.197+0000\"}]",content);
+	}	@Test
+	public void should_rew_parkinglot_list_case_when_add_parkinglot()throws Exception{
+		Express express = new Express("111","Mike","12332443345","booked",new Date());
+		//Express express2 = new Express("222","Danny","12332443345","booked",new Date());
+		//Express express3 = new Express("333","Gina","12332443345","booked",new Date());
+
+		expressRepository.saveAndFlush(express);
+		//expressRepository.saveAndFlush(express2);
+
+		String jsonString = JSON.toJSONString(express);
+
+		String content = mockMvc.perform(get("/express")).andExpect(status().isOk())
+				.andReturn().getResponse().getContentAsString();
+
+		//JSONObject jsonObject = new JSONObject(content);
+
+
+		assertEquals("[{\"id\":\"111\",\"recipient\":\"Mike\",\"phone\":\"12332443345\",\"status\":\"booked\",\"bookinkTime\":\"2019-07-25T02:51:09.197+0000\"}]",content);
+	}
 
 }

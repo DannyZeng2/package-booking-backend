@@ -24,16 +24,18 @@ public class ExpressController {
     }
 
     @GetMapping
-    public ResponseEntity getAllItem(){
+    public ResponseEntity getItem(){
         List<Express> allItem=expressService.getExpress();
         return ResponseEntity.ok().body(allItem);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity delete(@PathVariable String id){
-        expressService.deleteById(id);
+    @PutMapping("/{id}")
+    public ResponseEntity updateBookingTimeById(@PathVariable String id){
+        expressService.updateBookingTimeById(id);
         return ResponseEntity.ok().build();
     }
+
+
 
 
 

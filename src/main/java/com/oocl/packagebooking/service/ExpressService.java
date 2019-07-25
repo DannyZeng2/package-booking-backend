@@ -24,4 +24,8 @@ public class ExpressService {
     public void deleteById(String id) {
         expressRepository.deleteById(id);
     }
+
+    public void updateBookingTimeById(String id) {
+//        expressRepository.updateBookingTimeById(id);
+    }
 }
