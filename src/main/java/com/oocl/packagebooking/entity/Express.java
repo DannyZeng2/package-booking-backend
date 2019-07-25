@@ -24,6 +24,14 @@ public class Express {
 
     }
 
+    public Express(String id, String recipient, String phone, String status, Date bookinkTime) {
+        this.id = id;
+        this.recipient = recipient;
+        this.phone = phone;
+        this.status = status;
+        this.bookinkTime = bookinkTime;
+    }
+
     public String getId() {
         return id;
     }
